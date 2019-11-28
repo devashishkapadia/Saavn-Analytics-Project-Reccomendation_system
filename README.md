@@ -106,3 +106,35 @@ Each cluster will be associated with only one artist but the vice-versa might no
 In this problem, you have to group users based on their listening patterns. The data that has been provided to you does not contain any explicit information such as age, genre preferences, gender etc.
 
 The data provides you with information about users’ behaviour history, and you need to build a model that can learn from implicit features and group similar users together. This problem revolves around training models based on inherent behaviours.
+
+
+
+Datasets
+In the given problem as mentioned, you will be making use of four datasets. Description and link for each dataset are mentioned below. All the datasets are stored on Amazon S3. 
+
+User Click-Stream Activity
+
+Attributes:  "UserID", "Timestamp", "SongID" and "Date"
+
+Use the below link on your browser or use the wget command on the CLI.
+
+https://s3.amazonaws.com/bigdataanalyticsupgrad/activity/sample100mb.csv
+MetaData
+
+Attributes:  "Song ID" and "Artist ID"
+
+A single "Song ID" can be linked to multiple "Artist IDs"
+
+Notification Clicks
+
+Attributes: "Notification ID", "User ID", and "Date"
+
+ 
+
+Notification Artists
+
+Attributes: "Notification ID" and "Artist ID"
+
+One "Notification ID" can be mapped to multiple artists
+
+Note:  The metadata, notification clicks and notification artists dataset links are directories and hence you won't be able to open them in your browser. Instead, use the S3 connector in your Spark program to fetch the input directly from S3 into a DataFrame.
